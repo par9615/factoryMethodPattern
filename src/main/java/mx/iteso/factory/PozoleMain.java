@@ -6,7 +6,11 @@ import mx.iteso.factory.stores.*;
 public class PozoleMain {
     public static void main (String[] args) {
         PozoleStore allPozoles = new AllPozolesStore();
-
+        PozoleStore menuderia = new MenudoStore();
+        PozoleStore blancoStore = new PozoleBlancoStore();
+        PozoleStore rojoStore = new PozoleRojoStore();
+        PozoleStore verdeStore = new PozoleVerdeStore();
+        PozoleStore pozolilloStore = new PozolilloStore();
 
         Pozole pozole = verdeStore.orderPozole("pollo");
         System.out.println("First order is: "+ pozole.getName());
