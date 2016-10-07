@@ -1,5 +1,8 @@
 package mx.iteso.factory.pozoles;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -8,18 +11,22 @@ import static org.junit.Assert.*;
 public class PozoleRojoTrompaTest {
     public PozoleRojoTrompa pozoleRojoTrompa;
 
+    @Before
     public void setUp() {
         pozoleRojoTrompa = new PozoleRojoTrompa();
     }
 
+    @Test
     public void testToppings() {
         assertEquals(pozoleRojoTrompa.toppings.size(),3,0);
     }
 
+    @Test
     public void testName() {
         assertEquals("Pozole Rojo con Trompa", pozoleRojoTrompa.getName());
     }
 
+    @Test
     public void testCaldo() {
         assertEquals("Caldo Rojo", pozoleRojoTrompa.broth);
     }
