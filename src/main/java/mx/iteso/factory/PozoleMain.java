@@ -5,22 +5,22 @@ import mx.iteso.factory.stores.*;
 
 public class PozoleMain {
     public static void main (String[] args) {
-        PozoleStore allPozoles = new AllPozolesStore();
+        AllPozolesStore allPozoles = new AllPozolesStore();
 
 
-        Pozole pozole = verdeStore.orderPozole("pollo");
+        Pozole pozole = allPozoles.createPozole("verde","pollo");
         System.out.println("First order is: "+ pozole.getName());
         System.out.println();
 
-        pozole = rojoStore.orderPozole("pollo");
+        pozole = allPozoles.createPozole("rojo","pollo");
         System.out.println("Second order is: "+ pozole.getName());
         System.out.println();
 
-        pozole = menuderia.orderPozole("pollo");
+        pozole = allPozoles.createPozole("menudo","pollo");
         System.out.println("Third order is: "+ pozole.getName());
         System.out.println();
 
-        pozole = pozolilloStore.orderPozole("cachete");
+        pozole = allPozoles.createPozole("pozolillo","cachete");
         System.out.println("Fourth order is: "+ pozole.getName());
     }
 }
