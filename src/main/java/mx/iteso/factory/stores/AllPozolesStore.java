@@ -6,12 +6,14 @@ import mx.iteso.factory.PozoleStore;
 /**
  * Created by simio on 05/10/2016.
  */
+
 public class AllPozolesStore{
     PozoleStore verdeStore = new PozoleVerdeStore();
     PozoleStore rojoStore = new PozoleRojoStore();
     PozoleStore menuderia = new MenudoStore();
     PozoleStore pozolilloStore = new PozolilloStore();
     PozoleStore blancoStore = new PozoleBlancoStore();
+
 
     public Pozole createPozole(String type, String meat){
         if(type == "verde")
